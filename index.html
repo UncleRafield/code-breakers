@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codebreaker Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Codebreaker</h1>
+    <div id="game">
+      <div class="instructions">
+        <p>Each player chooses a 4-digit code. Take turns to guess each other’s code!</p>
+      </div>
+      <div id="setup">
+        <input type="password" id="player1Code" placeholder="Player 1 Code (4-digits)" maxlength="4">
+        <input type="password" id="player2Code" placeholder="Player 2 Code (4-digits)" maxlength="4">
+        <button class="button" onclick="startGame()">Start Game</button>
+      </div>
+      <div id="gameBoard" style="display:none;">
+        <h2>Turn: <span id="currentPlayer">Player 1</span></h2>
+        <input type="text" id="guessInput" placeholder="Enter guess (4-digits)" maxlength="4">
+        <button class="button" onclick="makeGuess()">Submit Guess</button>
+        <div id="feedback"></div>
+      </div>
+      <div id="result"></div>
+      <button id="restartButton" class="button" style="display:none;" onclick="restartGame()">Restart Game</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
